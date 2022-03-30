@@ -13279,27 +13279,6 @@ Profit Margin                    36.23%  19.24%   25.14%   10.25%
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Dividend-Yeld">Dividend Yeld<a class="anchor-link" href="#Dividend-Yeld">&#182;</a></h2><p>The dividend yield, expressed as a percentage, is a financial ratio (dividend/price) that shows how much a company pays out in dividends each year relative to its stock price.</p>
-<ul>
-<li><p>The dividend yield—displayed as a percentage—is the amount of money a company pays shareholders for owning a share of its stock divided by its current stock price.</p>
-</li>
-<li><p>Mature companies are the most likely to pay dividends.</p>
-</li>
-<li><p>Companies in the utility and consumer staple industries often having higher dividend yields.</p>
-</li>
-<li><p>Real estate investment trusts (REITs), master limited partnerships (MLPs), and business development companies (BDCs) pay higher than average dividends; however, the dividends from these companies are taxed at a higher rate.</p>
-</li>
-<li><p>It's important for investors to keep in mind that higher dividend yields do not always indicate attractive investment opportunities because the dividend yield of a stock may be elevated as the result of a declining stock price.</p>
-</li>
-</ul>
-<p><a href="https://www.investopedia.com/terms/d/dividendyield.asp">Read more</a></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Profit-Margin">Profit Margin<a class="anchor-link" href="#Profit-Margin">&#182;</a></h2><p>Profit margin is one of the commonly used profitability ratios to gauge the degree to which a company or a business activity makes money. It represents what percentage of sales has turned into profits. Simply put, the percentage figure indicates how many cents of profit the business has generated for each dollar of sale. For instance, if a business reports that it achieved a 35% profit margin during the last quarter, it means that it had a net income of $0.35 for each dollar of sales generated.</p>
 <ul>
 <li><p>Profit margin gauges the degree to which a company or a business activity makes money, essentially by dividing income by revenues.</p>
@@ -13317,62 +13296,6 @@ Profit Margin                    36.23%  19.24%   25.14%   10.25%
 
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">keys</span> <span class="o">=</span> <span class="p">[</span>
-	<span class="s2">&quot;Forward Annual Dividend Rate 4&quot;</span><span class="p">,</span>
-	<span class="s2">&quot;Forward Annual Dividend Yield 4&quot;</span><span class="p">,</span>
-	<span class="s2">&quot;Trailing Annual Dividend Rate 3&quot;</span><span class="p">,</span>
-	<span class="s2">&quot;Trailing Annual Dividend Yield 3&quot;</span><span class="p">,</span>
-	<span class="s2">&quot;Dividend Date 3&quot;</span><span class="p">,</span>
-	<span class="s2">&quot;Payout Ratio 4&quot;</span>
-<span class="p">]</span>
-
-<span class="n">data</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">symbols</span><span class="p">:</span>
-	<span class="n">data</span><span class="p">[</span><span class="n">s</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
-
-<span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">symbols</span><span class="p">:</span>
-	<span class="n">stats</span> <span class="o">=</span> <span class="n">stock_info</span><span class="o">.</span><span class="n">get_stats</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">upper</span><span class="p">())</span>
-	<span class="n">attributes</span> <span class="o">=</span> <span class="p">{</span><span class="n">v</span><span class="p">:</span> <span class="n">k</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">stats</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()[</span><span class="s2">&quot;Attribute&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
-	<span class="n">data</span><span class="p">[</span><span class="n">s</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span> <span class="n">stats</span><span class="p">[</span><span class="s2">&quot;Value&quot;</span><span class="p">][</span><span class="n">attributes</span><span class="p">[</span><span class="n">k</span><span class="p">]]</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">keys</span> <span class="p">]</span>
-
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">keys</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>                                          NVDA    AMD          INTC   TSLA
-Forward Annual Dividend Rate 4            0.16    NaN          1.46    NaN
-Forward Annual Dividend Yield 4          0.06%    NaN         2.83%    NaN
-Trailing Annual Dividend Rate 3           0.16   0.00          1.39   0.00
-Trailing Annual Dividend Yield 3         0.06%  0.00%         2.68%  0.00%
-Dividend Date 3                   Mar 23, 2022    NaN  Feb 28, 2022    NaN
-Payout Ratio 4                           4.16%  0.00%        28.60%  0.00%
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
     </div>
   </div>
