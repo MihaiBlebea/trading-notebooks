@@ -4,11 +4,11 @@ from typing import List
 dir = Path(__file__).parent.resolve()
 
 def main():
-	public_dir = Path(f"{dir}/../public")
+	public_dir = Path(f"{dir}/../docs")
 	files = searching_all_files(public_dir)
 	
 	links = [f"[{f}](/{f})" for f in files]
-	with open(f"{dir}/../public/index.md", "w") as file:
+	with open(f"{dir}/../docs/index.md", "w") as file:
 		file.write("\n".join(links))
 
 
