@@ -1,0 +1,5 @@
+[compare.md](/compare.md)
+[candles.md](/candles.md)
+[dividend_compare.md](/dividend_compare.md)
+[trading.md](/trading.md)
+[intrinsec-value.md](/intrinsec-value.md)
