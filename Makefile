@@ -17,3 +17,10 @@ init:
 
 notebook:
 	jupyter nbconvert --execute --to html --template basic --output-dir=./output compare.ipynb
+
+build:
+	./env/bin/jupyter-book build ./public
+
+create-book:
+	./env/bin/jupyter-book create $(name)/
+
